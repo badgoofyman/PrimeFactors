@@ -23,3 +23,7 @@ TEST_F(PrimeFactorsFixture, Of3_ReturnsSelf) {
 TEST_F(PrimeFactorsFixture, Of4_ReturnsRepeatedFactor) {
 	EXPECT_THAT(prime_factor.of(4), ElementsAre(2, 2));
 }
+
+TEST_F(PrimeFactorsFixture, Of6_ReturnsTwoDistinctFactors) {
+	EXPECT_THAT(prime_factor.of(6), ElementsAre(2, 3));
+}
