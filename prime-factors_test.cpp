@@ -11,3 +11,7 @@ public:
 TEST_F(PrimeFactorsFixture, Of1_ReturnsEmpty) {
 	EXPECT_THAT(prime_factor.of(1), IsEmpty());
 }
+
+TEST_F(PrimeFactorsFixture, Of2_ReturnsSelf) {
+	EXPECT_THAT(prime_factor.of(2), ElementsAre(2));
+}
