@@ -19,3 +19,7 @@ TEST_F(PrimeFactorsFixture, Of2_ReturnsSelf) {
 TEST_F(PrimeFactorsFixture, Of3_ReturnsSelf) {
 	EXPECT_THAT(prime_factor.of(3), ElementsAre(3));
 }
+
+TEST_F(PrimeFactorsFixture, Of4_ReturnsRepeatedFactor) {
+	EXPECT_THAT(prime_factor.of(4), ElementsAre(2, 2));
+}
