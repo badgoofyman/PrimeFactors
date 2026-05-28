@@ -2,8 +2,11 @@
 
 std::vector<int> PrimeFactors::of(int number) const {
 	std::vector<int> result;
-	if (number % 2 == 0) {
-		result.push_back(2);
+	for (int divisor = 2; number > 1; divisor++) {
+		if (number % divisor == 0) {
+			result.push_back(divisor);
+			break;
+		}
 	}
 	return result;
 }
